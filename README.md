@@ -6,10 +6,9 @@ VitaGlow es una marca comprometida con el bienestar integral. Nuestra misión es
 
 A continuación, te presentamos un mockup de la página web de VitaGlow. Este diseño ofrece una visión general de cómo se verá nuestra plataforma en línea, donde podrás explorar nuestros productos, obtener información detallada sobre sus beneficios y realizar compras de manera conveniente y segura.
 
-![Mockup de la Página Web de VitaGlow](my-app/public/images/vitaglowDesign.png)
+![Mockup de la Página Web de VitaGlow](/my-app/public/images/vitaglowDesign.png);
 
 En VitaGlow, nos esforzamos por ofrecer una experiencia de usuario intuitiva y atractiva que refleje nuestro compromiso con la calidad, la salud y el bienestar integral.
-
 
 ### Nuestros Compromisos:
 
