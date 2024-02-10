@@ -1,33 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Outfit", sans-serif;
 }
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  background-image: radial-gradient(at 27% 37%,
+          hsla(215, 98%, 61%, 1) 0px,
+          transparent 0%),
+      radial-gradient(at 97% 21%, rgba(27, 12, 139, 0.075) 0px, transparent 50%),
+      radial-gradient(at 52% 99%, rgba(152, 0, 15, 0.224) 0px, transparent 50%),
+      radial-gradient(at 10% 29%, rgba(68, 0, 255, 0.082) 0px, transparent 50%),
+      radial-gradient(at 97% 96%, rgba(255, 162, 0, 0.144) 0px, transparent 50%),
+      radial-gradient(at 33% 50%, rgba(0, 76, 255, 0.155) 0px, transparent 50%),
+      radial-gradient(at 79% 53%, rgba(255, 0, 21, 0.089) 0px, transparent 50%);
+}
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+.logo_text {
+  @apply max-sm:hidden font-semibold text-lg text-black tracking-wide;
+}
+
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+  @apply text-sm  text-gray-700 hover:text-gray-500 font-medium;
+}
+
+
+.container {
+  @apply w-[90%] mx-auto max-w-[1400px];
+}
+
+.flex__app {
+  @apply flex items-center justify-between;
+}
+
+
+.text_product{
+  @apply font-semibold border-[1px] border-bluebg py-1 px-5 rounded-full text-blackText
+  text-sm lg:text-base;
+}
+
+.tab {
+  @apply bg-transparent text-blackText py-3 px-4 rounded-tl-sm rounded-tr-sm
+  duration-200 ease-in-out w-full lg:w-[230px] border-b-2 border-[1px] border-b-grayBorder font-poppins
+  hover:border-b-bluebg hover:bg-[#ffffff] border-grayBorder;
+}
+
+.active-tab {
+  @apply  border-b-2 border-b-bluebg text-bluebg;
+}
+
+.content {
+  @apply absolute py-4 text-grayText opacity-0 duration-300 ease-in-out ;
+}
+
+.active-content{
+  @apply opacity-100 static;
+}
+
+.text_distribuidor {
+  @apply font-semibold text-slate-100;
+}
+
+.accordion-item {
+  @apply hidden transition-height duration-300 ease-in;
+}
+
+.accordion-item.open{
+  @apply block opacity-100;
+}
+
+.label-sty{
+  @apply pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.6rem] peer-focus:scale-[0.8] peer-data-[te-input-state-active]:-translate-y-[0.9rem];
+}
+
+.input-sty{
+  @apply block min-h-[auto] w-full rounded border-[1px] bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100  border-neutral-300 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0;
 }
