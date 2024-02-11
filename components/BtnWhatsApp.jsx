@@ -16,7 +16,12 @@ const BtnWhatsApp = () => {
 
     const product = allProducts.find(product => product.id === id);
 
-    const message = `Hola, estoy intersado en comprar ${product.name}`;
+    const message = product
+  ? `Hola, me gustaría comprar ${product.name}.`
+  : `Estoy interesado en tus productos.`;
+
+    console.log(product)
+
     const phoneNumber = "573202494811";
 
     return (
