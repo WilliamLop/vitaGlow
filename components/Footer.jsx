@@ -73,7 +73,8 @@ const Footer = () => {
                 <span>© 2024 Copyright:</span>
                 <a
                 class="font-semibold text-neutral-600 dark:text-neutral-400"
-                href="https://tw-elements.com/"
+                href="https://github.com/WilliamLop"
+                target='_blank'
                 >Fenbapps</a>
             </div>
             </footer>

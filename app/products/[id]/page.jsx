@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import ProductsDesign from '../../../components/ProductsDesign';
 import { arrow, bowl, mentalHealth } from '../../../public/images';
+import BtnWhatsApp from '../../../components/BtnWhatsApp';
 
 
 const pageProps = ({ params }) => {
@@ -44,6 +45,7 @@ const pageProps = ({ params }) => {
 
   // Redondear al número entero más cercano
   const roundedDiscount = Math.round(discount);
+
 
 
   return (
@@ -250,6 +252,7 @@ const pageProps = ({ params }) => {
         </div>
       ))}
     </div>
+
   )
 }
 

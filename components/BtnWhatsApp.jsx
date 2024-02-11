@@ -1,11 +1,22 @@
+"use client";
+
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import iconWhat from '../public/images/whatsapp.png';
+import { products, newproducts } from '../constants';
+import { usePathname, useRouter } from "next/navigation";
+import { useParams } from 'next/navigation';
+
 
 const BtnWhatsApp = () => {
 
-    const message = "Hola, ¿cómo puedo ayudarte?"; // El texto que deseas enviar
+    const {id} = useParams();
+    const allProducts = [...products, ...newproducts];
+
+    const product = allProducts.find(product => product.id === id);
+
+    const message = `Hola, estoy intersado en comprar ${product.name}`;
     const phoneNumber = "573202494811";
 
     return (

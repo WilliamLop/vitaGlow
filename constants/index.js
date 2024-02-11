@@ -1215,7 +1215,7 @@ export const footerLinks = [
     },
     {
         imgIcon: phone,
-        text: '+57 3227352635'
+        text: '+57 3202494811'
     },
 
 ];
@@ -1231,11 +1231,11 @@ export const contactIcons = [
     },
     {
         icon: phoneContact,
-        text: '+57 3227352635'
+        text: '+57 3202494811'
     },
     {
         icon: tax,
-        text: 'Id: 10241247'
+        text: '👉: Felipe Romero'
     },
 ]
 
