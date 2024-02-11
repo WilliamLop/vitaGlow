@@ -10,7 +10,7 @@ const ProductPage = () => {
     return (
         <div className=''>
             <div className=''>
-                <HeadDesc imgProp={imgproducwhite} title="Nuestros Productos"
+                <HeadDesc text="Salud" title="Nuestros Productos"
                 desc="Son diseñados para brindarte una experiencia de compra inigualable,
                 aquí podrás encontrar una gran variedad de productos para tu salud y vida."/>
             </div>

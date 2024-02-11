@@ -7,13 +7,13 @@ const ContactPage = () => {
     return (
         <div className=''>
             <section class="">
-            <HeadDesc imgProp={imgproducwhite} title="Contacto"
+            <HeadDesc text="Economia" title="Contacto"
                 desc="Somos una empresa dedicada a la venta y distribución de productos para el
                 cuidado personal, enmarcados bajo marcas reconocidas a nivel nacional e internacional
                 por su calidad y excelente servicio." 
             />
-            <div class="bg-neutral-200">
-                    <div class="container bg-slate-100 relative bottom-[50px]">
+            <div class="bg-whitebg">
+                    <div class="container bg-neutral-100 relative bottom-[50px]">
                         <div
                             class="block rounded-lg  shadow-lg
                             md:py-16 md:px-12 backdrop-blur-[30px]">

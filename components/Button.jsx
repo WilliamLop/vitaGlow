@@ -35,9 +35,9 @@ const Button = ({ variant, disabled, title, startIcon, endIcon, size, color }) =
     return (
         <button className={`${buttonStyle} ${sizeStyle} ${colorStyle}`} 
         title={`${title}`}>
-            {startIcon && <span className=""><Image src={startIcon}/></span>}
+            {startIcon && <span className=""><Image src={startIcon} alt="icon"/></span>}
                 {title}
-            {endIcon && <span className=""><Image src={endIcon}/></span>}
+            {endIcon && <span className=""><Image src={endIcon} alt="icon"/></span>}
         </button>
     )
 }

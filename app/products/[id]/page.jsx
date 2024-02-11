@@ -44,13 +44,13 @@ const pageProps = ({ params }) => {
 
   // Redondear al número entero más cercano
   const roundedDiscount = Math.round(discount);
-  console.log(roundedDiscount)
+
 
   return (
     <div>
       {arr.map((item) => (
         <div className="">
-          <HeadDesc title={item.type} />
+          <HeadDesc title={item.type} text="Producto"/>
           <div className='bg-whitebg py-8 '>
 
             <div className="grid gap-4 lg:gap-0 container lg:py-12" key={arr.id}>
@@ -214,7 +214,7 @@ const pageProps = ({ params }) => {
                           <div className="">
                             <div className="mt-6">
                               <div className='flex gap-2 items-center'>
-                                <Image src={mentalHealth} width={25} height={25} />
+                                <Image src={mentalHealth} width={25} height={25} alt="icon-vital" />
                                 <p className="text-base lg:text-lg text-blackText font-semibold leading-7
                                     font-poppins">
                                   {item.beneficios[key].title}

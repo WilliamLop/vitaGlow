@@ -21,7 +21,7 @@ export default function Home() {
                 {/* Information home */}
                 <p className="uppercase">Los mejores ganoderma</p>
                 <h1 className="text-5xl xl:text-6xl  font-bold font-outfit ">
-                  Es para tu salu 
+                  Es para tu salud
                   <br />
                   <span className="text-bluebg">
                     Ganoderma
