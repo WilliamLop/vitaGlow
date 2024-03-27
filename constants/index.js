@@ -1,7 +1,7 @@
 import { chocolate, hongosbg, latterico, logo_p, mocharico, ganocafe, rooibos, shampoo, cereal, cordygold, exfoliante, ganofresh, ganotransparent, ribbon, house, email, phone, clasico, acondicionador, reskine, ganoderma, excellium, mushroom, planet, ubi, phoneContact, tax, facebook, tiktok, instagram } from '../public/images/index';
 
 export const navLinks = [
-    { href: "/", label: "Inico" },
+    { href: "/", label: "Inicio" },
     { href: "/about", label: "Acerca de" },
     { href: "/products", label: "Productos" },
     { href: "/contact", label: "Contacto" },
