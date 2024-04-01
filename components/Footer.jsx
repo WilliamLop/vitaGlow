@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className='text-neutral-600 bg-[#04000F]'>
             <footer
-            class="bg-neutral-100 text-center text-neutral-600 bg-[#04000F] dark:text-neutral-200 lg:text-left
+            class="bg-neutral-950 text-center text-neutral-600  dark:text-neutral-200 lg:text-left
             container">
             <div
                 class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
