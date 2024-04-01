@@ -2,67 +2,63 @@ import Button from "../components/Button";
 import Product from "../components/Product"
 import ParticleBg from "../components/ParticleBg"
 // import Particles from "@components/particles";
-import { bgfuture, hongo, hongoSeparador, latterico, personalContact, productsHome, productsVite, ribbon, rooibos } from "../public/images";
+import { bgfuture, hongo, hongoSeparador, latterico, personalContact, productsHome, productsVite, ribbon, rooibos, vitalidad } from "../public/images";
 import Image from "next/image";
 import Link from "next/link";
 import { pasosGanoderma } from "../constants";
+import CarouselProducts from "../components/carusel";
 
 
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-gradient-to-r from-cyan-500 to-blue-600">
       <div className="relative">
           <div className="font-poppins lg:h-screen grid py-12">
-            <ParticleBg />
-            <section className="container pt-12 grid lg:items-start
+            {/* <ParticleBg /> */}
+            <section className="container pt-12 grid lg:items-center
             lg:justify-between lg:grid-cols-2">
               <article className="text-center grid gap-4 lg:gap-6 mt-12 text-slate-100 lg:text-start">
                 {/* Information home */}
-                <p className="uppercase">Los mejores ganoderma</p>
-                <h1 className="text-5xl xl:text-6xl  font-bold font-outfit ">
-                  Es para tu salud
+                <p className="uppercase bg-black/30 w-fit mx-auto md:mx-0 px-2 rounded-full">Renace con Ganoderma</p>
+                <h1 className="text-4xl xl:text-5xl  font-bold font-outfit ">
+                  Eleva tu Bienestar, Fortalece tu Vida
                   <br />
-                  <span className="text-bluebg">
-                    Ganoderma
+                  <span className="text-gray-950">
+                  Ganoderma Plus
                   </span>
                 </h1>
 
-                <Button title="Ver más" color="primary" size="lg" className="mx-auto"/>
+                <Button title="Ver más" color="secondary" size="lg" className="mx-auto"/>
               </article>
 
-              <article className="hidden lg:block">
-                <Image
+              <article className="">
+                {/* <Image
                   src={productsVite}
                   alt="products gano"
                   className="object-cover"
-                />
+                /> */}
+                <CarouselProducts />
               </article>
             </section>
           </div>
 
       </div>
         <div className="bg-whitebg pt-12 lg:pb-12 w-full relative h-auto mx-auto shadow-md">
-          <Image
-            src={hongo}
-            className="object-contain absolute right-0 top-0 opacity-10 lg:opacity-40 lg:rotate-90 lg:bottom-[10px]"
-            width={400}
-            height={400}
-            alt="hongo-bg"
-          />
-
           <div class="container mx-auto md:px-6 font-poppins">
 
             <section class="mb-32 lg:mb-8 mt-10">
-              <h2 class="mb-12 text-center text-4xl font-bold" data-aos="fade-up" data-aos-duration="3000">
-                Mejora tu salud con Ganoderma
+              <h2 class="mb-12 text-center text-4xl font-bold
+              lg:w-[400px] mx-auto" data-aos="fade-up" data-aos-duration="3000">
+                Elixir de Renovación Descubre el Poder del Ganoderma
               </h2>
 
               <div class="flex flex-wrap items-center">
                 <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:px-6 lg:mb-0 lg:w-5/12">
                   <div class="relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
                     data-te-ripple-init data-te-ripple-color="light">
-                    <Image src={bgfuture} className="w-full" alt="future" />
+                    <Image src={vitalidad} className="w-full h-[400px] lg:h-[600px]
+                    object-cover" alt="vitalidad-ilustracion" />
                     <div
                       class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,0%,0.4)] bg-fixed">
                       <div class="flex h-full items-center justify-center">
@@ -84,26 +80,24 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div class="w-full shrink-0 grow-0 basis-auto md:px-6 lg:w-7/12">
+                <div class="w-full shrink-0 grow-0 basis-auto md:px-6 lg:w-7/12 py-12 md:py-4 grid gap-6">
                   {pasosGanoderma.map((item) => (
-                    <div class="mb-12 flex">
-                      <div class="shrink-0">
-                        <div class="rounded-full p-4 shadow-md">
-                          {/* Imagen */}
-                          <Image
-                            className="h-10 w-10 text-white"
-                            src={item.imgURL}
-                            alt={item.imgAlt}
-                          />
+                      <div class="">
+                        <div className="flex items-center py-2 px-2 border border-gray-800/30 rounded-md
+                        shadow-md">
+                            <Image
+                              className="w-[40px] h-[40px] text-white shadow-md rounded-full"
+                              src={item.imgURL}
+                              alt={item.imgAlt}
+                            />
+                          <div class="ml-4 grow">
+                            <p class="mb-1 font-bold text-lg">{item.title}</p>
+                            <p class="text-gray-600/70 text-base">
+                              {item.description}
+                            </p>                
+                          </div>
                         </div>
                       </div>
-                      <div class="ml-4 grow">
-                        <p class="mb-1 font-bold text-lg">{item.title}</p>
-                        <p class="text-gray-600/70 text-base">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
                   ))}
                 </div>
               </div>
@@ -113,22 +107,6 @@ export default function Home() {
         </div>
       {/* Products */}
       <section className="bg-whitebg pt-4 relative pb-[40px] shadow-sm lg:py-4">
-
-        <Image
-          src={hongo}
-          className="object-contain absolute lg:left-0 lg:top-0 opacity-20 lg:rotate-90
-            hidden lg:block"
-          width={400}
-          height={400}
-          alt="hongo-bg"
-          />
-        <Image
-          src={hongo}
-          className="object-contain absolute right-0 lg:bottom-[-120px] opacity-10 lg:opacity-80 lg:rotate-90"
-          width={400}
-          height={400}
-          alt="hongo-bg"
-        />
 
         {/* Seccion de titulos */}
         <article className="text-center font-poppins relative">
@@ -159,14 +137,14 @@ export default function Home() {
       </section>
 
       {/* Distribuidor */}
-      <section className="container py-20 place-items-center xl:text-start bg-neutral-950
+      <section className="container py-20 place-items-center xl:text-start
       grid gap-4 xl:grid-cols-[300px,400px,1fr] items-center justify-center text-white">
         {/* Informacion */}
         <div className="font-bold text-center">
           <p className="text-lg lg:text-2xl">
             Más  de
           </p>
-          <p className="text-7xl mb-4 text-[#02A2DD]">
+          <p className="text-7xl mb-4 text-[#171717]">
             + 10.000
           </p>
 
@@ -193,7 +171,7 @@ export default function Home() {
             Conviértase en nuestro distribuidor
           </h2>
 
-          <p className="text-gray-400 text-md lg:w-full mx-auto xl:mx-0">
+          <p className="text-gray-950 text-md lg:w-full mx-auto xl:mx-0 font-medium">
 
             <span className="text_distribuidor">
               ¡Descubre la libertad de ser tu propio jefe y alcanzar tus sueños financieros!
@@ -204,7 +182,7 @@ export default function Home() {
           </p>
 
           <Link href="./contact">
-            <Button color="primary" size="lg" title="Contacto" />
+            <Button color="secondary" size="lg" title="Contacto" />
           </Link>
         </article>
 

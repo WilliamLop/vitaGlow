@@ -5,8 +5,8 @@ import ParticleBg from "./ParticleBg";
 const HeadDesc = ({ text, title, desc }) => {
     return (
         <div className="text-center py-16 text-white
-        grid gap-4 relative">
-            <ParticleBg />
+        grid gap-4 relative bg-gradient-to-r from-cyan-700 to-blue-600">
+            {/* <ParticleBg /> */}
             {/* <Image 
                 src={imgProp}
                 className='absolute top-0 md:top-[0px] left-0 right-0 mx-auto opacity-10'
@@ -21,7 +21,7 @@ const HeadDesc = ({ text, title, desc }) => {
                 {title}
             </h2>
 
-            <p className="lg:w-[650px] mx-auto text-gray-300/80 lg:px-0 px-2
+            <p className="lg:w-[650px] mx-auto text-slate-50 lg:px-0 px-2 z-10
             text-lg">
             {desc}
             </p>

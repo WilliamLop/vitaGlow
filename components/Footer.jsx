@@ -7,9 +7,9 @@ import { socialMedia } from '../constants';
 
 const Footer = () => {
     return (
-        <div className='text-neutral-600 dark:bg-neutral-900'>
+        <div className='text-neutral-600 bg-[#04000F]'>
             <footer
-            class="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-900 dark:text-neutral-200 lg:text-left
+            class="bg-neutral-100 text-center text-neutral-600 bg-[#04000F] dark:text-neutral-200 lg:text-left
             container">
             <div
                 class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
@@ -70,12 +70,12 @@ const Footer = () => {
             </div>
 
             <div class="bg-neutral-200 p-6 text-center dark:bg-neutral-900">
-                <span>© 2024 Copyright:</span>
+                <span>© 2024 creado por la empresa de software: </span>
                 <a
-                class="font-semibold text-neutral-600 dark:text-neutral-400"
+                class="font-semibold text-violet-600"
                 href="https://github.com/WilliamLop"
                 target='_blank'
-                >Fenbapps</a>
+                > Eddile </a>
             </div>
             </footer>
         </div>

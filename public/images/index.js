@@ -47,6 +47,7 @@ import facebook from './icons/facebook.svg';
 import instagram from './icons/instagram.svg';
 import mentalHealth from './mentalHealth.png';
 import bowl from './bowl.png';
+import vitalidad from './vitalidad.jpg'
 
 // import from './';
 
@@ -98,5 +99,6 @@ export {
     productsVite,
     mentalHealth,
     bowl,
+    vitalidad
 
 }

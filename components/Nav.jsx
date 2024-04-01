@@ -47,14 +47,17 @@ const Nav = () => {
             e.preventDefault();
             const desplazamientoActual = window.pageYOffset;
             if (ubicacionPrincipal.current >= desplazamientoActual) {
-                headerRef.current.style.top = "0px";
-
+                headerRef.current.style.top = '0px';
+                headerRef.current.classList.remove('bg-transparent'); // Eliminar clase de fondo transparente si está presente
+                headerRef.current.classList.add('bg-gray-950', 'bg-opacity-70', 'backdrop-blur-md'); // Agregar clase de fondo blanco con opacidad
                 if (ubicacionPrincipal.current <= 10) {
-                    headerRef.current.style.backgroundColor = "transparent";
+                    headerRef.current.classList.remove('bg-gray-950', 'bg-opacity-70', 'backdrop-blur-md'); // Eliminar clase de fondo blanco con opacidad si está presente
+                    headerRef.current.classList.add('bg-transparent'); // Agregar clase de fondo transparente
                 }
-            } else {
-                headerRef.current.style.top = "-200px";
-                headerRef.current.style.backgroundColor = "bg-[#121212]";
+            }  else {
+                headerRef.current.style.top = '-200px'; // Oculta el header
+                headerRef.current.classList.add('bg-transparent'); // Eliminar clase de fondo transparente si está presente
+                headerRef.current.classList.add('bg-gray-800', 'bg-opacity-10', 'backdrop-blur-md'); // Agregar clase de fondo blanco con opacidad
             }
 
             ubicacionPrincipal.current = desplazamientoActual;
@@ -108,7 +111,7 @@ const Nav = () => {
                                     <li
                                         key={link.id}
                                         className="
-                  text-gray-900 lg:text-slate-300"
+                  text-gray-900 lg:text-slate-50"
                                         onClick={() => handleClickLinks(index)}
                                         onMouseEnter={() => setHoveredLink(index)}
                                         onMouseLeave={() => setHoveredLink(null)}
